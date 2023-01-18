@@ -67,7 +67,7 @@ background-color: black;
   top: 50%;
   left: 52%;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 400px) {
 #emojiBttn {
     font-size: 25px
   }
