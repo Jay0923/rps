@@ -1,0 +1,69 @@
+body{
+  background: #FFC83D;
+}
+h1{
+    text-align: center;
+}
+#title{
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 35px
+}
+#options{
+  height: fit-content;
+  width: fit-content;
+}
+.bttn{
+  background-color: black;
+  display: inline;
+  color: white;
+  border: none;
+  border-radius: 13%;
+  padding: 7px;
+  transition: all 150ms
+}
+.emojiBttn{
+  background-color: #FFC83D;
+  width: fit-content;
+  font-size: 50px;
+  border: none;
+}
+.bttn:active{
+  padding: 8px;
+}
+#scores{
+  margin-top: 20px;
+  display: none;
+  grid-auto-flow: column;
+  row-gap: 20px;
+}
+#player, #bot{
+  text-align: center;
+}
+ul {
+    list-style: none;
+    font-size: 40px;
+}
+li {
+margin-bottom: 10px
+}
+.reset {
+background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  height: fit-content;
+  position: relative;
+  margin: -20px -50px;
+  width: fit-content;
+  top: 50%;
+  left: 52%;
+}

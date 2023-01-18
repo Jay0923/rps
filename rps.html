@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="rps.css" />
+    <script src="rps.js" defer></script>
+    <title>RPS</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">Rock Paper Scissors</h1>
+      <div id="options">
+        <button id="rock" class="emojiBttn">👊</button>
+        <button id="paper" class="emojiBttn">✋</button>
+        <button id="scissors" class="emojiBttn">✌️</button>
+      </div>
+      <div>
+        <button id="3" class="bttn">Best of 3</button>
+        <button id="5" class="bttn">Best of 5</button>
+        <button id="7" class="bttn">Best of 7</button>
+      </div>
+    </div>
+    <div id="scores">
+      <div id="player">
+        <h2>Player</h2>
+        <p id="playerCount">0</p>
+        <div id="playerplays"></div>
+      </div>
+      <div id="bot">
+        <h2>Bot</h2>
+        <p id="botCount">0</p>
+        <div id="botplays"></div>
+      </div>
+    </div>
+  </body>
+</html>
