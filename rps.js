@@ -16,43 +16,19 @@ let bot = 0;
 const playerPlays = [];
 const botPlays = [];
 const rockFunc = () => {
-  botChoise = Math.floor(Math.random() * botChoices.length);
-  playerPlays.unshift("<li>👊</li>");
-  if (botChoices[botChoise] === "Scissors") {
-    player++;
-    botPlays.unshift("<li>✌️</li>");
-  } else if (botChoices[botChoise] === "Paper") {
-    bot++;
-    botPlays.unshift("<li>✋</li>");
-  } else {
-    botPlays.unshift("<li>👊</li>");
-  }
+  playerPlays.unshift("<li>👊🏿</li>");
+    botPlays.unshift("<li>🤚🏽</li>");
+  bot++
 };
 const paperFunc = () => {
-  botChoise = Math.floor(Math.random() * botChoices.length);
-  playerPlays.unshift("<li>✋</li>");
-  if (botChoices[botChoise] === "Rock") {
-    player++;
-    botPlays.unshift("<li>👊</li>");
-  } else if (botChoices[botChoise] === "Scissors") {
-    bot++;
+  playerPlays.unshift("<li>🤚🏽</li>")
     botPlays.unshift("<li>✌️</li>");
-  } else {
-    botPlays.unshift("<li>✋</li>");
-  }
-};
+  bot++
+}
 const scissorsFunc = () => {
-  botChoise = Math.floor(Math.random() * botChoices.length);
   playerPlays.unshift("<li>✌️</li>");
-  if (botChoices[botChoise] === "Paper") {
-    player++;
-    botPlays.unshift("<li>✋</li>");
-  } else if (botChoices[botChoise] === "Rock") {
-    bot++;
-    botPlays.unshift("<li>👊</li>");
-  } else {
-    botPlays.unshift("<li>✌️</li>");
-  }
+  botPlays.unshift("<li>👊</li>");
+  bot++
 };
 const winner3 = () => {
   counter();
@@ -65,6 +41,8 @@ const winner3 = () => {
     botArr.style.display = "none";
     document.body.innerHTML += "<h1>Player wins</h1>";
   }
+  console.log(botPlays);
+  console.log(playerPlays);
 };
 const winner5 = () => {
   counter();
@@ -77,6 +55,8 @@ const winner5 = () => {
     botArr.style.display = "none";
     document.body.innerHTML += "<h1>Player wins</h1>";
   }
+  console.log(botPlays);
+  console.log(playerPlays);
 };
 const winner7 = () => {
   counter();
@@ -89,6 +69,8 @@ const winner7 = () => {
     botArr.style.display = "none";
     document.body.innerHTML += "<h1>Player wins</h1>";
   }
+  console.log(botPlays);
+  console.log(playerPlays);
 };
 const hideBttns = () => {
   bestOf3.style.display = "none";
