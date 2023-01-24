@@ -16,79 +16,33 @@ let bot = 0;
 const playerPlays = [];
 const botPlays = [];
 const rockFunc = () => {
-  botChoise = Math.floor(Math.random() * botChoices.length);
   playerPlays.unshift("<li>👊</li>");
-  if (botChoices[botChoise] === "Scissors") {
-    player++;
-    botPlays.unshift("<li>✌️</li>");
-  } else if (botChoices[botChoise] === "Paper") {
-    bot++;
-    botPlays.unshift("<li>✋</li>");
-  } else {
-    botPlays.unshift("<li>👊</li>");
-  }
+    botPlays.unshift("<li>🖐</li>");
+  bot++
 };
 const paperFunc = () => {
-  botChoise = Math.floor(Math.random() * botChoices.length);
-  playerPlays.unshift("<li>✋</li>");
-  if (botChoices[botChoise] === "Rock") {
-    player++;
-    botPlays.unshift("<li>👊</li>");
-  } else if (botChoices[botChoise] === "Scissors") {
-    bot++;
+  playerPlays.unshift("<li>🖐</li>")
     botPlays.unshift("<li>✌️</li>");
-  } else {
-    botPlays.unshift("<li>✋</li>");
-  }
-};
+  bot++
+}
 const scissorsFunc = () => {
-  botChoise = Math.floor(Math.random() * botChoices.length);
   playerPlays.unshift("<li>✌️</li>");
-  if (botChoices[botChoise] === "Paper") {
-    player++;
-    botPlays.unshift("<li>✋</li>");
-  } else if (botChoices[botChoise] === "Rock") {
-    bot++;
-    botPlays.unshift("<li>👊</li>");
-  } else {
-    botPlays.unshift("<li>✌️</li>");
-  }
+  botPlays.unshift("<li>👊</li>");
+  bot++
 };
-const winner3 = () => {
+const winner = (winCon) => {
   counter();
-  if (bot === 3) {
+  if (bot === winCon) {
     playerArr.style.display = "none";
     botArr.style.display = "none";
     document.body.innerHTML += "<h1>Bot wins</h1>";
-  } else if (player === 3) {
+  } else if (player === winCon) {
     playerArr.style.display = "none";
     botArr.style.display = "none";
     document.body.innerHTML += "<h1>Player wins</h1>";
   }
-};
-const winner5 = () => {
-  counter();
-  if (bot === 5) {
-    playerArr.style.display = "none";
-    botArr.style.display = "none";
-    document.body.innerHTML += "<h1>Bot wins</h1>";
-  } else if (player === 5) {
-    playerArr.style.display = "none";
-    botArr.style.display = "none";
-    document.body.innerHTML += "<h1>Player wins</h1>";
-  }
-};
-const winner7 = () => {
-  counter();
-  if (bot === 7) {
-    playerArr.style.display = "none";
-    botArr.style.display = "none";
-    document.body.innerHTML += "<h1>Bot wins</h1>";
-  } else if (player === 7) {
-    playerArr.style.display = "none";
-    botArr.style.display = "none";
-    document.body.innerHTML += "<h1>Player wins</h1>";
-  }
+  console.log(botPlays);
+  console.log(playerPlays);
 };
 const hideBttns = () => {
   bestOf3.style.display = "none";
@@ -110,19 +64,19 @@ bestOf3.addEventListener("click", () => {
   hideBttns();
   rock.addEventListener("click", () => {
     rockFunc();
-    winner3();
+    winner(3);
     counter();
     append();
   });
   paper.addEventListener("click", () => {
     paperFunc();
-    winner3();
+    winner(3);
     counter();
     append();
   });
   scissors.addEventListener("click", () => {
     scissorsFunc();
-    winner3();
+    winner(3);
     counter();
     append();
   });
@@ -131,19 +85,19 @@ bestOf5.addEventListener("click", () => {
   hideBttns();
   rock.addEventListener("click", () => {
     rockFunc();
-    winner5();
+    winner(5);
     counter();
     append();
   });
   paper.addEventListener("click", () => {
     paperFunc();
-    winner5();
+    winner(5);
     counter();
     append();
   });
   scissors.addEventListener("click", () => {
     scissorsFunc();
-    winner5();
+    winner(5);
     counter();
     append();
   });
@@ -152,19 +106,19 @@ bestOf7.addEventListener("click", () => {
   hideBttns();
   rock.addEventListener("click", () => {
     rockFunc();
-    winner7();
+    winner(7);
     counter();
     append();
   });
   paper.addEventListener("click", () => {
     paperFunc();
-    winner7();
+    winner(7);
     counter();
     append();
   });
   scissors.addEventListener("click", () => {
     scissorsFunc();
-    winner7();
+    winner(7);
     counter();
     append();
   });
